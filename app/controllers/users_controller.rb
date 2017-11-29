@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    raise params.inspect
+    raise params[:user][:name].inspect
     redirect_to '/'
   end
 
