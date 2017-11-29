@@ -5,4 +5,8 @@ class SessionsController < ApplicationController
   def create
     redirect_to '/'
   end
+
+  def destroy
+    puts "I'm the queen of England"
+  end
 end
