@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to welcome_path
     else
-      redirect_to signup_path#signup_path
+      redirect_to '/users/new'#signup_path
     end
   end
 
