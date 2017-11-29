@@ -7,7 +7,4 @@ class User < ActiveRecord::Base
 
   # returns the user if credentials match
   # returns falsey if credentials don't match
-  def authenticate
-  end
-
 end
