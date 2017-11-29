@@ -4,9 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    sessions[:password] = params[:user][:password].inspect
-    sessions[:user_name] = params[:user][:name]
-    redirect_to '/'
+    @user = User.find_by(name: params[:user][:name])
+    if @user && @user.authenticate(params[:user][:password])
+      session[:user_id] = @user.id
+      redirect_to '/'
   end
 
   def destroy
