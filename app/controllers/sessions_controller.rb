@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    raise params[:user][:password].inspect
+    sessions[:password] = params[:user][:password].inspect
     sessions[:user_name] = params[:user][:name]
     redirect_to '/'
   end
