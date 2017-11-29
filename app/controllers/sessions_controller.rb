@@ -8,5 +8,6 @@ class SessionsController < ApplicationController
 
   def destroy
     puts "I'm the queen of England"
+    redirect_to '/'
   end
 end
