@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
   def new
-    if session.include?(:name)
-      redirect_to welcome_path
-    else
-      @user = User.new
-    end
+    @user = User.new
   end
 
   def create
