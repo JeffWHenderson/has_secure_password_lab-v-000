@@ -2,6 +2,7 @@ new form!!!
 
 <%= form_for @user, url: signup_path do |f| %>
   <%= f.label :name %>
+  <%= f.text_field :name %>
 <% end %>
 <!-- <%#= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
   <input name=name>
