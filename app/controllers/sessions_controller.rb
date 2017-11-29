@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-  def create 
+  def create
     redirect_to '/'
   end
 end
