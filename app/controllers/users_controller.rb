@@ -7,9 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-    params[:user][:name].inspect
-    params[:user][:password]
-    redirect_to '/'
+      redirect_to welcome_path
+    else
+      render signup_path
+    end
   end
 
   def welcome
