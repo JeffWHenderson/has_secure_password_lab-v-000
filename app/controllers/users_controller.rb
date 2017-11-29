@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def welcome
-    "Hi, #{username}."
+    #@user = sessions[:username]
+    #"Hi, #{username}."
   end
 end
