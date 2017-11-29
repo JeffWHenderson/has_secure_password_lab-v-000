@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to welcome_path
     else
-      render '/welcome'
+      redirect_to '/welcome'
     end
   end
 
