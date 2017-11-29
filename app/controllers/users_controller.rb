@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def welcome
-    #@user = sessions[:username]
+    @user = User.find(session[:user_id])
     #"Hi, #{username}."
   end
 
