@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    raise @user.inspect
+    if @user.save
+      session[:user_id] = @user.id
     params[:user][:name].inspect
     params[:user][:password]
     redirect_to '/'
