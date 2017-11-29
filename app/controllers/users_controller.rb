@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user]).inspect
+    @user = User.new(user_params).inspect
     params[:user][:name].inspect
     params[:user][:password]
     redirect_to '/'
