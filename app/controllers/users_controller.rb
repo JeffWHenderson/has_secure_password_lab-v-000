@@ -14,4 +14,9 @@ class UsersController < ApplicationController
     #@user = sessions[:username]
     #"Hi, #{username}."
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :password)
 end
