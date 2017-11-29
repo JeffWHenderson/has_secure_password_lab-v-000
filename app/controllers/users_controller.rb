@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
+    if @user.save && @user.authenticate
       session[:user_id] = @user.id
       redirect_to welcome_path
     else
