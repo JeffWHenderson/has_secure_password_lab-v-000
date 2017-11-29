@@ -6,5 +6,6 @@ class UsersController < ApplicationController
   end
 
   def welcome
+    "Hi, #{username}."
   end
 end
